@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Generator – Jharkhand Rai University</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="form-container">
+      <h2 class="form-title">Generate ID Card</h2>
+      <form id="cardForm">
+        <div class="input-group">
+          <label class="input-label" for="firstName">First Name</label>
+          <input type="text" id="firstName" class="input-field" placeholder="Enter first name" required>
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="lastName">Last Name</label>
+          <input type="text" id="lastName" class="input-field" placeholder="Enter last name" required>
+        </div>
+        <div class="input-group">
+          <label class="input-label">Profile Photo</label>
+          <div class="file-upload-area" id="uploadArea">
+            <div class="upload-icon">📷</div>
+            <div class="upload-text">Drop photo here or click to browse</div>
+            <input type="file" class="file-input" id="photoInput" accept="image/*">
+          </div>
+        </div>
+        <button type="submit" class="generate-button" id="generateBtn">
+          Generate ID Card
+        </button>
+      </form>
+    </div>
+    <div class="id-card-container">
+      <div class="id-card" id="idCard">
+        <!-- Header -->
+        <div class="header-section">
+          <div class="black-header"></div>
+          <div class="red-section">
+            <div class="header-content">
+              <img src="Jru-logo-ranchi.png" alt="JRU Logo" class="university-logo">
+              <div class="university-text">
+                JHARKHAND<br>Rai University<br>
+                <span class="campus-location">RANCHI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <!-- Profile Section -->
+          <div class="profile-section">
+            <div class="profile-photo-container">
+              <div class="profile-photo" id="profileDisplay">
+                <span>No Photo</span>
+              </div>
+            </div>
+            <div class="student-name" id="nameDisplay">Uday K</div>
+            <div class="program-badge" id="programBadge">ME</div>
+          </div>
+          <!-- Details Section -->
+          <div class="details-section">
+            <div class="detail-row">
+              <span class="detail-label">ID Number</span>
+              <span class="detail-value" id="idNumber">ME2024947</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Session</span>
+              <span class="detail-value">2024 - 2026</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Mobile No</span>
+              <span class="detail-value" id="mobileNumber">8401213607</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Emergency Contact</span>
+              <span class="detail-value" id="emergencyContact">+91 6395419624</span>
+            </div>
+          </div>
+          <!-- Stamp -->
+          <div class="stamp-section">
+            <img src="IMG_2013.jpeg" alt="University Stamp" class="stamp-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
